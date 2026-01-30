@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About — Patric Slagveer" description="About Patric Slagveer, developer and founder of Orcine.">
+  <article class="about">
+    <h1>About</h1>
+
+    <p>
+      I'm <strong>Patric Slagveer</strong>, a software developer and founder of
+      <a href="https://github.com/orcinebv" target="_blank" rel="noopener">Orcine</a>.
+      I specialize in building scalable, modern applications using a pragmatic stack that gets things done.
+    </p>
+
+    <h2>What I Work With</h2>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <span class="tech-icon">🅰️</span>
+        <div>
+          <strong>Angular</strong>
+          <p>Building rich, reactive frontends with a typed, structured approach.</p>
+        </div>
+      </div>
+      <div class="tech-card">
+        <span class="tech-icon">🧠</span>
+        <div>
+          <strong>Azure AI</strong>
+          <p>Integrating AI services — from OpenAI models to cognitive search and beyond.</p>
+        </div>
+      </div>
+      <div class="tech-card">
+        <span class="tech-icon">🐱</span>
+        <div>
+          <strong>NestJS</strong>
+          <p>Crafting robust APIs and microservices with TypeScript on the server.</p>
+        </div>
+      </div>
+      <div class="tech-card">
+        <span class="tech-icon">⚡</span>
+        <div>
+          <strong>n8n</strong>
+          <p>Orchestrating automation workflows that connect everything together.</p>
+        </div>
+      </div>
+      <div class="tech-card">
+        <span class="tech-icon">🏗️</span>
+        <div>
+          <strong>Nx</strong>
+          <p>Managing monorepos with smart builds, caching, and code generation.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Philosophy</h2>
+    <p>
+      I believe in shipping early, iterating fast, and writing code that's easy to reason about.
+      Good software is built on pragmatic decisions, not hype cycles. I favour tools that
+      respect developer time and scale without drama.
+    </p>
+
+    <h2>Connect</h2>
+    <ul class="connect-list">
+      <li><a href="https://github.com/orcinebv" target="_blank" rel="noopener">GitHub — @orcinebv</a></li>
+      <li><a href="https://twitter.com/patric_slagveer" target="_blank" rel="noopener">Twitter — @patric_slagveer</a></li>
+    </ul>
+  </article>
+</BaseLayout>
+
+<style>
+  .about h1 {
+    margin-top: 0;
+    font-size: 2.25rem;
+    letter-spacing: -0.03em;
+  }
+
+  .about p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .tech-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .tech-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: border-color 0.2s;
+  }
+
+  .tech-card:hover {
+    border-color: var(--accent);
+  }
+
+  .tech-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+  }
+
+  .tech-card strong {
+    color: var(--text);
+    font-size: 1rem;
+  }
+
+  .tech-card p {
+    margin: 0.25rem 0 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+  .connect-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .connect-list li {
+    margin-bottom: 0.5rem;
+  }
+
+  .connect-list a {
+    font-size: 1rem;
+  }
+</style>
