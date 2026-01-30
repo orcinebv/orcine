@@ -1,12 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../utils/paths';
 ---
 
 <BaseLayout title="404 — Not Found">
   <div class="not-found">
     <h1>404</h1>
     <p>This page doesn't exist. Maybe it was a dream.</p>
-    <a href={`${import.meta.env.BASE_URL}`}>← Go home</a>
+    <a href={withBase('')}>← Go home</a>
   </div>
 </BaseLayout>
 

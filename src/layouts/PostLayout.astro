@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import { withBase } from '../utils/paths';
 
 interface Props {
   title: string;
@@ -44,7 +45,7 @@ const formattedUpdate = updatedDate?.toLocaleDateString('en-US', {
       <slot />
     </div>
     <footer class="post-footer">
-      <a href={`${import.meta.env.BASE_URL}posts/`}>← Back to all posts</a>
+      <a href={withBase('posts/')}>← Back to all posts</a>
     </footer>
   </article>
 </BaseLayout>

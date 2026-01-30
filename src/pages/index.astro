@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { getReadingTime } from '../utils/readingTime';
+import { withBase } from '../utils/paths';
 
 const posts = (await getCollection('posts'))
   .filter((post) => !post.data.draft)
@@ -11,7 +12,7 @@ const posts = (await getCollection('posts'))
 <BaseLayout title="Patric Slagveer">
   <section class="hero">
     <h1>Hi, I'm <span class="accent">@patric_slagveer</span>.</h1>
-    <a href={`${import.meta.env.BASE_URL}rss.xml`} class="rss-link">RSS Feed</a>
+    <a href={withBase('rss.xml')} class="rss-link">RSS Feed</a>
     <p class="tagline">
       Building modern apps with Angular, Azure AI, NestJS, n8n & Nx.
     </p>
@@ -31,7 +32,7 @@ const posts = (await getCollection('posts'))
         });
         return (
           <li>
-            <a href={`${import.meta.env.BASE_URL}posts/${post.id}/`} class="post-link">
+            <a href={withBase(`posts/${post.id}/`)} class="post-link">
               <span class="post-title">{post.data.title}</span>
               <span class="post-meta">
                 Published: {formattedDate} • {readingTime}
@@ -45,7 +46,7 @@ const posts = (await getCollection('posts'))
   </section>
 
   <div class="all-posts">
-    <a href={`${import.meta.env.BASE_URL}posts/`}>All Posts →</a>
+    <a href={withBase('posts/')}>All Posts →</a>
   </div>
 </BaseLayout>
 

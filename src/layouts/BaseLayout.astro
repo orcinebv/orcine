@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { withBase } from '../utils/paths';
 
 interface Props {
   title: string;
@@ -18,8 +19,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={canonicalURL} />
-    <link rel="alternate" type="application/rss+xml" title="Patric Slagveer" href={`${import.meta.env.BASE_URL}rss.xml`} />
-    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+    <link rel="alternate" type="application/rss+xml" title="Patric Slagveer" href={withBase('rss.xml')} />
+    <link rel="icon" type="image/svg+xml" href={withBase('favicon.svg')} />
     <title>{title}</title>
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -32,10 +33,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <body>
     <header>
       <nav>
-        <a href={`${import.meta.env.BASE_URL}`} class="nav-home">PS</a>
+        <a href={withBase('')} class="nav-home">PS</a>
         <div class="nav-links">
-          <a href={`${import.meta.env.BASE_URL}about/`}>About</a>
-          <a href={`${import.meta.env.BASE_URL}posts/`}>Posts</a>
+          <a href={withBase('about/')}>About</a>
+          <a href={withBase('posts/')}>Posts</a>
         </div>
       </nav>
     </header>
