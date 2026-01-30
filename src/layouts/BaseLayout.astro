@@ -21,6 +21,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="canonical" href={canonicalURL} />
     <link rel="alternate" type="application/rss+xml" title="Patric Slagveer" href={withBase('rss.xml')} />
     <link rel="icon" type="image/svg+xml" href={withBase('favicon.svg')} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
     <title>{title}</title>
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -33,7 +36,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <body>
     <header>
       <nav>
-        <a href={withBase('')} class="nav-home">PS</a>
+        <a href={withBase('')} class="nav-home">Patric Slagveer</a>
         <div class="nav-links">
           <a href={withBase('about/')}>About</a>
           <a href={withBase('posts/')}>Posts</a>
