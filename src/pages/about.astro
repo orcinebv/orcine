@@ -5,7 +5,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout title="About — Patric Slagveer" description="About Patric Slagveer, developer and founder of Orcine.">
   <article class="about">
     <div class="about-hero">
-      <img src="/orcine/patric-avatar.jpg" alt="Patric Slagveer" class="about-avatar" />
+      <picture>
+        <source srcset="/orcine/patric-avatar.webp" type="image/webp" />
+        <img src="/orcine/patric-avatar.jpg" alt="Patric Slagveer" class="about-avatar" />
+      </picture>
       <div>
         <h1>About</h1>
         <p>
