@@ -4,13 +4,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="About — Patric Slagveer" description="About Patric Slagveer, developer and founder of Orcine.">
   <article class="about">
-    <h1>About</h1>
-
-    <p>
-      I'm <strong>Patric Slagveer</strong>, a software developer and founder of
+    <div class="about-hero">
+      <img src="/orcine/patric-avatar.jpg" alt="Patric Slagveer" class="about-avatar" />
+      <div>
+        <h1>About</h1>
+        <p>
+          I'm <strong>Patric Slagveer</strong>, a software developer and founder of
       <a href="https://github.com/orcinebv" target="_blank" rel="noopener">Orcine</a>.
       I specialize in building scalable, modern applications using a pragmatic stack that gets things done.
     </p>
+      </div>
+    </div>
 
     <h2>What I Work With</h2>
     <div class="tech-grid">
@@ -67,6 +71,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
+  .about-hero {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 3px solid var(--border);
+  }
+
+  @media (max-width: 600px) {
+    .about-hero {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .about-avatar {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
   .about h1 {
     margin-top: 0;
     font-size: 2.25rem;
