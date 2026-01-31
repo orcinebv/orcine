@@ -99,10 +99,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .about-avatar {
-    width: 100%;
-    height: 100%;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center top;
     display: block;
   }
 
@@ -114,6 +115,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
 
     .about-hero picture {
+      width: 150px;
+      height: 150px;
+    }
+
+    .about-avatar {
       width: 150px;
       height: 150px;
     }
