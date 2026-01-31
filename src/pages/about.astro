@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../utils/paths';
 ---
 
 <BaseLayout title="About — Patric Slagveer" description="About Patric Slagveer, developer and founder of Orcine.">
   <article class="about">
     <div class="about-hero">
       <picture>
-        <source srcset="/orcine/patric-avatar.webp" type="image/webp" />
-        <img src="/orcine/patric-avatar.jpg" alt="Patric Slagveer" class="about-avatar" />
+        <source srcset={withBase('patric-avatar.webp')} type="image/webp" />
+        <img src={withBase('patric-avatar.jpg')} alt="Patric Slagveer" class="about-avatar" />
       </picture>
       <div>
         <h1>About</h1>
@@ -22,21 +23,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <h2>What I Work With</h2>
     <div class="tech-grid">
       <div class="tech-card">
-        <img src="/orcine/icons/angular.svg" alt="Angular" class="tech-icon" />
+        <img src={withBase('icons/angular.svg')} alt="Angular" class="tech-icon" />
         <div>
           <strong>Angular</strong>
           <p>Building rich, reactive frontends with a typed, structured approach.</p>
         </div>
       </div>
       <div class="tech-card">
-        <img src="/orcine/icons/azure.svg" alt="Azure AI" class="tech-icon" />
+        <img src={withBase('icons/azure.svg')} alt="Azure AI" class="tech-icon" />
         <div>
           <strong>Azure AI</strong>
           <p>Integrating AI services — from OpenAI models to cognitive search and beyond.</p>
         </div>
       </div>
       <div class="tech-card">
-        <img src="/orcine/icons/nestjs.svg" alt="NestJS" class="tech-icon" />
+        <img src={withBase('icons/nestjs.svg')} alt="NestJS" class="tech-icon" />
         <div>
           <strong>NestJS</strong>
           <p>Crafting robust APIs and microservices with TypeScript on the server.</p>

@@ -14,8 +14,8 @@ const posts = (await getCollection('posts'))
     <div class="hero-content">
       <a href={withBase('about/')} class="avatar-link">
         <picture>
-          <source srcset="/orcine/patric-avatar.webp" type="image/webp" />
-          <img src="/orcine/patric-avatar.jpg" alt="Patric Slagveer" class="hero-avatar" />
+          <source srcset={withBase('patric-avatar.webp')} type="image/webp" />
+          <img src={withBase('patric-avatar.jpg')} alt="Patric Slagveer" class="hero-avatar" />
         </picture>
       </a>
       <div class="hero-text">

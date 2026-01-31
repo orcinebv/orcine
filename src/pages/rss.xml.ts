@@ -15,7 +15,7 @@ export async function GET(context: APIContext) {
       title: post.data.title,
       pubDate: post.data.pubDate,
       description: post.data.description,
-      link: `/orcine/posts/${post.id}/`,
+      link: `${import.meta.env.BASE_URL}posts/${post.id}/`,
     })),
   });
 }
