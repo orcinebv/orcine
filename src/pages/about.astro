@@ -19,35 +19,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <h2>What I Work With</h2>
     <div class="tech-grid">
       <div class="tech-card">
-        <span class="tech-icon">🅰️</span>
+        <img src="/orcine/icons/angular.svg" alt="Angular" class="tech-icon" />
         <div>
           <strong>Angular</strong>
           <p>Building rich, reactive frontends with a typed, structured approach.</p>
         </div>
       </div>
       <div class="tech-card">
-        <span class="tech-icon">🧠</span>
+        <img src="/orcine/icons/azure.svg" alt="Azure AI" class="tech-icon" />
         <div>
           <strong>Azure AI</strong>
           <p>Integrating AI services — from OpenAI models to cognitive search and beyond.</p>
         </div>
       </div>
       <div class="tech-card">
-        <span class="tech-icon">🐱</span>
+        <img src="/orcine/icons/nestjs.svg" alt="NestJS" class="tech-icon" />
         <div>
           <strong>NestJS</strong>
           <p>Crafting robust APIs and microservices with TypeScript on the server.</p>
         </div>
       </div>
       <div class="tech-card">
-        <span class="tech-icon">⚡</span>
+        <img src="/orcine/icons/n8n.svg" alt="n8n" class="tech-icon" />
         <div>
           <strong>n8n</strong>
           <p>Orchestrating automation workflows that connect everything together.</p>
         </div>
       </div>
       <div class="tech-card">
-        <span class="tech-icon">🏗️</span>
+        <img src="/orcine/icons/nx.svg" alt="Nx" class="tech-icon" />
         <div>
           <strong>Nx</strong>
           <p>Managing monorepos with smart builds, caching, and code generation.</p>
@@ -141,9 +141,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .tech-icon {
-    font-size: 1.5rem;
+    width: 36px;
+    height: 36px;
     flex-shrink: 0;
     margin-top: 0.15rem;
+    border-radius: 0;
+    border: none;
   }
 
   .tech-card strong {
